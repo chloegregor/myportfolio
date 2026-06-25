@@ -119,6 +119,7 @@ function Arrownext ({slug}: {slug?: string}) {
 
 }
 export default function Work({trad, next, prev, locale}: {trad: Trad, next?: string, prev?: string, locale: string}) {
+  console.log("work", trad)
 
   if (trad === null) {
     return

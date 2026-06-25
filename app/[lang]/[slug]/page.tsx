@@ -9,6 +9,7 @@ export default async function SlugPage({ params }: { params: Promise<{ lang: str
   const trad = await getTraductionBySlugAndLocale(slug, lang);
 
 
+
   if (!trad){
     notFound();}
 

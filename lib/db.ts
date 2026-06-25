@@ -41,6 +41,7 @@ export const  getTraductionBySlugAndLocale = cache(async (slug: string, locale: 
     const traduction = await prisma.language.findFirst({
       where: {
         slug: slug,
+        locale: locale
       },
       select: {
          id: true,
