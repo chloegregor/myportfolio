@@ -5,7 +5,7 @@ import Tags from "../components/tags";
 import LanguageButtons from "@/app/components/language_buttons";
 import {AboutPage} from "@/app/components/about";
 import Link from "next/link";
-import LocalFont from 'next/font/local';
+import { DM_Sans } from 'next/font/google'
 
 
 
@@ -16,9 +16,12 @@ interface LangLayoutProps {
 
 }
 
-export const enbyGertrude = LocalFont({
-  src: "../../public/fonts/Enby_Gertrude_roman.woff2",
-});
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  axes: ['opsz'],   // pour l'optical size
+  display: 'swap',
+})
+
 
 export default async function LangLayout({ children, params }: LangLayoutProps) {
 
@@ -33,19 +36,19 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
 
   return (
     <>
-      <header className={`${enbyGertrude.className}`}>
+      <header className={`${dmSans.className}`}>
         <div className=" flex flex-col gap-6 lg:gap-3 px-4 pt-2 pb-6 fixed bg-fond w-full z-[100]">
           <div className= {`flex justify-between `}>
-            <Link href="/" className="lg:text-3xl text-[1.3em] ">Chloé Grégoire </Link>
+            <Link href="/" className="lg:text-3xl text-[1.3em] ">Chloé_Grégoire.dev </Link>
             <LanguageButtons currentLanguage={locale} />
           </div>
-          <nav className="flex w-full bg-fond justify-between">
+          <nav className="flex w-full justify-between">
               <span className="">
                 <Tags tags={tags} locale={locale} />
               </span>
             {profile && (
             <span>
-              <AboutPage cv={profile.cv } portfolio={profile.portfolio} email={profile.email} tel={profile.telephone}/>
+              <AboutPage cv={profile.cv } email={profile.email} tel={profile.telephone}/>
             </span>
               )}
           </nav>

@@ -19,7 +19,6 @@ export async function getWorkById(id: number) {
 }
 
 export async function createWork(formData: FormData) {
-  console.log("formData received in action", formData)
     const type = formData.get('type') as string;
     const urlarticle = formData.get('urlarticle') as string;
     const year = formData.get('year') as string;
@@ -44,10 +43,8 @@ export async function createWork(formData: FormData) {
     const placement_y = position[Math.floor(Math.random() * position.length)];
 
     async function fetchThumbnail(url:string) {
-      console.log('fetchThumbnail called with url:', url);
     const response = await fetch(`https://vimeo.com/api/oembed.json?url=${(url)}`);
      const data = await response.json();
-      console.log("VIMEO THUMBNAIL DATA", data);
      const thumbnail_url = data.thumbnail_url_with_play_button;
      return thumbnail_url;
    }
@@ -89,8 +86,6 @@ export async function createWork(formData: FormData) {
   }
 
 export async function updateWork(formData: FormData) {
-  console.log('updateWork called');
-    console.log("formData received in update action", formData)
     const id = Number(formData.get('id'));
     const type = formData.get('type') as string;
     const urlarticle = formData.get('urlarticle') as string;
@@ -113,10 +108,8 @@ export async function updateWork(formData: FormData) {
     const videos_captions_en = formData.get('videos_caption_en') as string;
 
     async function fetchThumbnail(url:string) {
-      console.log('fetchThumbnail called with url:', url);
     const response = await fetch(`https://vimeo.com/api/oembed.json?url=${(url)}`);
      const data = await response.json();
-      console.log("VIMEO THUMBNAIL DATA", data);
      const thumbnail_url = data.thumbnail_url_with_play_button;
      return thumbnail_url;
    }
@@ -150,7 +143,12 @@ export async function updateWork(formData: FormData) {
                     type === "Publications" ? "Publications" : type;
 
     await updateTraduction(type, fr_id, title_fr, subtitle_fr, description_fr, photos_captions_fr, videos_captions_fr);
-    await updateTraduction(type_en, en_id, title_en, subtitle_en, description_en, photos_captions_en, videos_captions_en);
+    if(en_id){
+      await updateTraduction(type_en, en_id, title_en, subtitle_en, description_en, photos_captions_en, videos_captions_en);
+    }else{
+      await createTraduction( type_en, title_en, subtitle_en, description_en, 'en', photos_captions_en, videos_captions_en, id);
+
+    }
 
     revalidatePath('/admin/works');
     return { ok: true};

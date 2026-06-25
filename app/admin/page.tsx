@@ -15,7 +15,6 @@ export default async function AdminPage() {
     headers: await headers(),
   });
 
-  console.log("Session admin page:", session);
 
   if (!session?.user) {
     redirect('/sign-in');

@@ -138,10 +138,10 @@ export default function Work({trad, next, prev, locale}: {trad: Trad, next?: str
 
 
   return (
-    <div className= "px-4 lg:px-20 h-full flex flex-col " key={trad.id}>
+    <div className= "px-4 lg:px-20 h-full flex flex-col opacity" key={trad.id}>
       <div className="flex lg:flex-row flex-col  ">
         {medias.length > 0 && (
-          <div className=" lg:w-[75%] order-2 lg:order-0 lg:mt-0 mt-[10px] ">
+          <div className=" lg:w-[75%] order-2 lg:order-0 lg:mt-0 mt-[10px] flex justify-center  ">
             <WorkMedias medias={medias} videos_caption={trad.videos_caption} photos_caption={trad.photos_caption}/>
           </div>
 
@@ -156,7 +156,7 @@ export default function Work({trad, next, prev, locale}: {trad: Trad, next?: str
             <div className="h-[50px]">
               <h3 className=" thin ">{trad.subtitle}</h3>
               {work.url && (
-                <a href={work.url} target="_blank" className="text-[0.9em] text-blue-700 underline underline-offset-3 cursor-pointer">{work.url}</a>
+                <a href={work.url} target="_blank" className="text-[0.9em] text-orange-400 underline underline-offset-3 cursor-pointer">{work.url}</a>
               )}
             </div>
           </span>

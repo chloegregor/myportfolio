@@ -12001,12 +12001,12 @@ export namespace Prisma {
 
   export type LanguageWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    slug?: string
     AND?: LanguageWhereInput | LanguageWhereInput[]
     OR?: LanguageWhereInput[]
     NOT?: LanguageWhereInput | LanguageWhereInput[]
     locale?: StringFilter<"Language"> | string
     title?: StringFilter<"Language"> | string
+    slug?: StringFilter<"Language"> | string
     subtitle?: StringNullableFilter<"Language"> | string | null
     description?: StringNullableFilter<"Language"> | string | null
     type?: StringFilter<"Language"> | string
@@ -12016,7 +12016,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Language"> | Date | string
     updatedAt?: DateTimeFilter<"Language"> | Date | string
     work?: XOR<WorkScalarRelationFilter, WorkWhereInput>
-  }, "id" | "slug">
+  }, "id">
 
   export type LanguageOrderByWithAggregationInput = {
     id?: SortOrder

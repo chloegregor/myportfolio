@@ -55,9 +55,10 @@ export default function CardGrid({ trad, opacity, currentTag}: { trad: Language,
         {
           illustrationValue && (
             work.illustration?.includes("https://") ? (
-              <div className="  relative h-[100%] w-[100%]">
-                <Image src={illustrationValue} alt={trad.title} fill className="object-contain"/>
-              </div>
+              <div className="  relative h-[100%] w-[100%]  text-center">
+                  <Image src={illustrationValue} alt={trad.title} fill className="object-contain"/>
+                </div>
+
             )
               : textKey && (
                 <div className=" w-full ">

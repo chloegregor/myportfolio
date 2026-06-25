@@ -25,7 +25,7 @@ export default function WorkMedia({medias, photos_caption, videos_caption}: Work
           <Vimeo url={medias[currentIndex].url} />
         </div>
       ) : (
-        <Image src={medias[currentIndex].url} alt={`media${currentIndex}`} fill priority className="object-contain object-left"/>
+        <Image src={medias[currentIndex].url} alt={`media${currentIndex}`} width='1000' height='1000' priority className=" max-h-[700px] w-auto  "/>
 
       )
     )
@@ -52,9 +52,9 @@ export default function WorkMedia({medias, photos_caption, videos_caption}: Work
 
   if (medias.length >= 1) {
     return (
-      <div className="  flex lg:flex-row  flex-col gap-2 ">
-        <div className="lg:order-2 w-full flex flex-col gap-2 lg:relative">
-          <div className="aspect-3/2 flex-1 relative ">
+      <div className="  flex lg:flex-row  flex-col gap-2 w-full justify-center  ">
+        <div className="lg:order-2 flex flex-col gap-2 lg:relative ">
+          <div className=" w-full   ">
             {renderMedia()}
           </div>
           <p className=" lg:absolute lg:-bottom-8  text-gray-400 text-[0.9em]">
@@ -73,9 +73,7 @@ export default function WorkMedia({medias, photos_caption, videos_caption}: Work
                 )
               }
               )}
-
             </div>
-
         )}
         </div>
       </div>

@@ -108,7 +108,7 @@ export function EditForm({ workToEdit, onClose }: EditFormProps ) {
   return (
     <>
 
-    <div className="fixed overflow-scroll bg-white  p-[1em] inset-0 w-[70%] h-[700px] m-auto shadow-2xl">
+    <div className="fixed overflow-scroll bg-black  p-[1em] inset-0 w-[70%] h-[700px] m-auto shadow-2xl">
       <form onSubmit={handleSubmit}  className="flex flex-col gap-[1em] mt-[1em] relative ">
         <button className="absolute top-0 right-0 z-10 cursor-pointer" onClick={onClose} type="button">Fermer</button>
         <h2 className="text-[2em] text-center">Edition</h2>

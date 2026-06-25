@@ -38,7 +38,7 @@ export const getTraductionsByLocale = cache(async (locale: string) =>  {
 });
 
 export const  getTraductionBySlugAndLocale = cache(async (slug: string, locale: string) => {
-    const traduction = await prisma.language.findUnique({
+    const traduction = await prisma.language.findFirst({
       where: {
         slug: slug,
       },

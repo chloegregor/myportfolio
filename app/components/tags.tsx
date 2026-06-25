@@ -33,7 +33,7 @@ const tagColor: Record<string, [string, string]> = {
     <div className="flex gap-2
     ">
     <span className=" flex flex-col lg:flex-row gap-2">
-      <Link href={`/${locale}`}  className={` ${currentTag === "tout" ? "text-red-600" : "hover:text-red-600"}`} scroll={true}> {locale === "fr" ? "Tout voir" : "See all"}</Link>
+      <Link href={`/${locale}`}  className={` ${currentTag === "tout" ? "text-orange-400" : "hover:text-orange-400"}`} scroll={true}> {locale === "fr" ? "Tout voir" : "See all"}</Link>
       <Link href={`/${locale}/?tag=react`} className={currentTag === "react" ? tagColor["React"][0] : tagColor["React"][1]}>NextJs / React</Link>
       <Link href={`/${locale}/?tag=mobile`} className={currentTag === "mobile" ? tagColor["Mobile"][0] : tagColor["Mobile"][1]}>Mobile</Link>
     </span>

@@ -17,7 +17,6 @@ export default function CloudinaryWidget({handleUpload}: CloudinaryWidgetProps) 
     }
   },[url]);
 
-  console.log("Uploaded URLs:", url);
   return (
 
     <CldUploadWidget uploadPreset="erl_preset"
@@ -34,7 +33,6 @@ export default function CloudinaryWidget({handleUpload}: CloudinaryWidgetProps) 
     onSuccess={
       (result => {
               const infos = result?.info;
-              console.log("Upload successful:", infos);
               if (typeof infos === "object" && infos !== null && "secure_url" in infos) {
                 const newUrl : [string, string] = [infos.secure_url, infos.original_filename];
                 setUrl([newUrl]);

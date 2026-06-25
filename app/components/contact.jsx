@@ -8,7 +8,6 @@ export function Contact({ email, tel}) {
   const [isClicked, setIsClicked] = useState(false);
   const startEmail = email.slice(0, (email.indexOf("@")));
   const endEmail = email.slice(email.indexOf("@")+1);
-  console.log(startEmail, endEmail);
 
   return (
     <div>
@@ -16,7 +15,7 @@ export function Contact({ email, tel}) {
       Contact
     </button>
     {isClicked && (
-      <div className=" flex gap-2 absolute -bottom-6 right-0">
+      <div className=" opacity flex gap-2 absolute -bottom-6 right-0">
         <p>{startEmail}@{endEmail}</p>
         <p>{tel}</p>
       </div>

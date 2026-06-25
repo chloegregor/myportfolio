@@ -2,34 +2,16 @@
 
 :root {
   --background: #252121 ;
-  --foreground: #c4c0c0;
+  --foreground: #ffffff;
 }
 
 
-@font-face {
-  font-family: 'BBB_Karrik';
-  src: url('/fonts/BBB_Karrik.woff2') format('woff2'),
-  url('/fonts/BBB_Karrik.woff') format('woff');
-  font-style: normal;
-  font-weight: normal;
-  text-rendering: optimizeLegibility;
-}
 
-@font-face {
-    font-family:'Enby-Gertrude-Roman';
-    src:
-      url('/fonts/Enby_Gertrude_roman.woff2') format('woff2'),
-      url('/fonts/Enby_Gertrude_roman.woff') format('woff'),
-      url('/fonts/Enby_Gertrude_roman-SVG.woff2') format('woff2');
-      font-style: normal;
-    font-weight: normal;
-    text-rendering: optimizeLegibility;
-}
 
 body {
   font-family: var(--font-noto-sans-kannada);
   font-weight: 300;
-  background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(82, 82, 82, 1) 57%) ;
+  background: linear-gradient(90deg,rgba(0, 0, 0, 1) 60%, rgb(107, 152, 99) 100%) ;
   color : var(--foreground);
 }
 
@@ -41,9 +23,21 @@ body {
   transition: opacity 0.6s ease;
 }
 
+.opacity{
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
 @media (min-width: 1024px) {
   .transform{
-    transition: transform 4s ease, opacity 0.6s ease;
+    transition: transform 0.5s ease, opacity 0.6s ease;
   }
   .transform:hover{
     transform: scale(1.1);
@@ -57,7 +51,8 @@ body {
 
 
 .bg-fond{
-background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(82, 82, 82, 1) 57%);}
+background: linear-gradient(90deg,rgba(0, 0, 0, 1) 60%, rgb(107, 152, 99) 100%) ;
+}
 
 
 .disabled{

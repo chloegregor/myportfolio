@@ -4,7 +4,6 @@ const prisma = new PrismaClient();
 
 async function main() {
   // Seed data can be added here
-  console.log("Seeding profile data...");
   const existing = await prisma.profile.findFirst();
 
   if (!existing) {

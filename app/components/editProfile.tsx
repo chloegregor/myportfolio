@@ -21,7 +21,6 @@ export function EditProfile ({profile}: Profile) {
   const [uploadedCv, setUploadedCv] = useState<[string, string] | null>(null);
   const [uploadedPf, setUploadedPf] = useState<[string, string] | null>(null);
 
-  console.log("cv:", uploadedCv);
 
   function handleUploadCv(urls: [string, string][]){
     if (urls.length > 0) {
@@ -62,7 +61,7 @@ export function EditProfile ({profile}: Profile) {
       <button onClick={() => setIsClicked(!isClicked)} className="border p-1">Editer les infos perso</button>
       {isClicked && (
 
-          <div className="absolute overflow-scroll bg-white flex p-[1em] left-50 right-50 top-30 bottom-30 shadow-2xl z-10">
+          <div className="absolute overflow-scroll bg-black flex p-[1em] left-50 right-50 top-30 bottom-30 shadow-2xl z-10">
             <form onSubmit={handleSubmit} className=" flex grow flex-col relative mt-[2em] mb-[2em]">
               <button className="absolute top-0 right-0 cursor-pointer" onClick={() => setIsClicked(false)}>Fermer</button>
               <h2 className="text-[2em] text-center">Infos Perso</h2>
