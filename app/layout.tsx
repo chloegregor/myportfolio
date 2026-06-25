@@ -8,8 +8,8 @@ import { DM_Sans, Mulish, Noto_Sans_Kannada } from 'next/font/google';
 
 
 export const metadata: Metadata = {
-  title: "Élodie Rougeaux-Léaux",
-  description: "Portfolio de Élodie Rougeaux-Léaux",
+  title: "Chloé Grégoire | web developpement",
+  description: "développeuse web front-end",
 };
 
 const dmSans = DM_Sans({

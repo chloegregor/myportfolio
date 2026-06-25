@@ -225,7 +225,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/chloe/code/chloegregor/erl/src/generated/client/prod",
+      "value": "/home/chloe/code/chloegregor/myportfolio/src/generated/client/prod",
       "fromEnvVar": null
     },
     "config": {
@@ -239,12 +239,11 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/chloe/code/chloegregor/erl/prisma/schema.prisma",
+    "sourceFilePath": "/home/chloe/code/chloegregor/myportfolio/prisma/schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../../../../prisma",
   "clientVersion": "6.2.1",
@@ -253,6 +252,7 @@ const config = {
     "db"
   ],
   "activeProvider": "postgresql",
+  "postinstall": true,
   "inlineDatasources": {
     "db": {
       "url": {

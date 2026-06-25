@@ -96,11 +96,11 @@ export function CreateForm () {
                 <div  className="flex gap-5">
                   <label htmlFor="type">Type de projet :</label>
                   <select id="type" name="type" className="border w-[20%]">
-                    <option value="performances">Performance</option>
-                    <option value="expositions">Exposition</option>
-                    <option value="workshops">Workshop</option>
-                    <option value="presse">Presse</option>
-                    <option value ="publications">Publication</option>
+                    <option value="react">react / next</option>
+                    <option value="mobile">mobile</option>
+                    <option value="astro">astro</option>
+                    <option value="javascript">js</option>
+                    <option value="ruby">ruby</option>
                   </select>
                    <div className="flex gap-2">
                     <label htmlFor="urlarticle">lien externe : </label>

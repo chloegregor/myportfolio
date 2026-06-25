@@ -36,7 +36,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
       <header className={`${enbyGertrude.className}`}>
         <div className=" flex flex-col gap-6 lg:gap-3 px-4 pt-2 pb-6 fixed bg-fond w-full z-[100]">
           <div className= {`flex justify-between `}>
-            <Link href="/" className="lg:text-3xl text-[1.3em] ">Élodie Rougeaux-Léaux</Link>
+            <Link href="/" className="lg:text-3xl text-[1.3em] ">Chloé Grégoire </Link>
             <LanguageButtons currentLanguage={locale} />
           </div>
           <nav className="flex w-full bg-fond justify-between">

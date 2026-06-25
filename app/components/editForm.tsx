@@ -126,11 +126,11 @@ export function EditForm({ workToEdit, onClose }: EditFormProps ) {
               defaultValue={work.languages.find(lang => lang.locale === 'fr')?.type}
               required
               >
-              <option value="performances">Performance</option>
-              <option value="expositions">Exposition</option>
-              <option value="workshops">Workshop</option>
-              <option value="presse">Presse</option>
-              <option value ="publications">Publication</option>
+              <option value="react">react / next</option>
+              <option value="astro">astro</option>
+              <option value="mobile">mobile</option>
+              <option value="javascript">js</option>
+              <option value ="ruby">ruby</option>
             </select>
             <label className="" htmlFor={`urlarticle-${work.id}`}>lien externe : </label>
             <input

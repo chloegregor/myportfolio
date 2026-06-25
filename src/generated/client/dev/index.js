@@ -217,7 +217,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/chloe/code/chloegregor/erl/src/generated/client/dev",
+      "value": "/home/chloe/code/chloegregor/myportfolio/src/generated/client/dev",
       "fromEnvVar": null
     },
     "config": {
@@ -231,7 +231,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "/home/chloe/code/chloegregor/erl/prisma/schema.dev.prisma",
+    "sourceFilePath": "/home/chloe/code/chloegregor/myportfolio/prisma/schema.dev.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
@@ -245,7 +245,6 @@ const config = {
     "db"
   ],
   "activeProvider": "sqlite",
-  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {

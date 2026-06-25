@@ -28,7 +28,8 @@ export default function CloudinaryWidget({handleUpload}: CloudinaryWidgetProps) 
     }}
     options={{
       multiple: true,
-      sources: ['local']
+      sources: ['local'],
+      folder: 'myportfolio'
     }}
     onSuccess={
       (result => {
