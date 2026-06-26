@@ -9,7 +9,6 @@
 
 
 body {
-  font-family: var(--font-noto-sans-kannada);
   font-weight: 300;
   background: linear-gradient(90deg,rgba(0, 0, 0, 1) 60%, rgb(107, 152, 99) 100%) ;
   color : var(--foreground);

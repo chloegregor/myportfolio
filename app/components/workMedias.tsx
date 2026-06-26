@@ -45,7 +45,7 @@ export default function WorkMedia({medias, photos_caption, videos_caption}: Work
       media.thumbnail ? (
           <Image src={media.thumbnail} alt="video thumbnail" fill className=" "/>
       ) : (
-        <Image src={media.url} alt="photo thumbnail" fill className="object-cover"/>
+        <Image src={media.url} alt="photo thumbnail" fill sizes="max-width(100px)" className="object-cover"/>
       )
     )
   }
@@ -54,7 +54,7 @@ export default function WorkMedia({medias, photos_caption, videos_caption}: Work
     return (
       <div className="  flex lg:flex-row  flex-col gap-2 w-full justify-center  ">
         <div className="lg:order-2 flex flex-col gap-2 lg:relative ">
-          <div className=" w-full   ">
+          <div className=" w-full">
             {renderMedia()}
           </div>
           <p className=" lg:absolute lg:-bottom-8  text-gray-400 text-[0.9em]">

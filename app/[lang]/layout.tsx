@@ -54,7 +54,7 @@ export default async function LangLayout({ children, params }: LangLayoutProps) 
           </nav>
         </div>
     </header>
-      <div className=" w-full ">
+      <div className={`${dmSans.className} w-full`}>
         {children}
       </div>
 
