@@ -15,9 +15,9 @@ export function Contact({ email, tel}) {
       Contact
     </button>
     {isClicked && (
-      <div className=" opacity flex gap-2 absolute -bottom-6 right-0">
+      <div className=" opacity flex lg:flex-row flex-col-reverse items-end gap-2 absolute  right-0">
         <p>{startEmail}@{endEmail}</p>
-        <p>{tel}</p>
+        <p className="w-fit">{tel}</p>
       </div>
     )}
     </div>
