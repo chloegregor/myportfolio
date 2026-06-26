@@ -88,7 +88,7 @@ export function CreateForm () {
 
 
       {isClicked && (
-          <div className="absolute overflow-scroll bg-white  p-[1em] left-50 right-50 top-30 bottom-30 shadow-2xl z-10">
+          <div className="absolute overflow-scroll p-[1em] bg-black left-50 right-50 top-30 bottom-30 shadow-2xl z-10">
             <form onSubmit={handleSubmit}  method="POST" encType="multipart/form-data" className="flex flex-col gap-[1em] mt-[2em] relative">
               <button className="absolute top-0 right-0 cursor-pointer" onClick={() => setIsClicked(false)}>Fermer</button>
               <h2 className="text-[2em] text-center">Création</h2>

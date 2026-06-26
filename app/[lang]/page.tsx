@@ -4,7 +4,7 @@ import { Traduction } from "@/app/components/card_filter";
 
 export default async function Home({params, searchParams}: {params: Promise<{ lang: string }>,
   searchParams: Promise<{ [key: string]: string | undefined }>}) {
-
+console.log("DB:", process.env.DATABASE_URL)
   const searchprms = await searchParams;
   const tag = searchprms.tag || "";
 
